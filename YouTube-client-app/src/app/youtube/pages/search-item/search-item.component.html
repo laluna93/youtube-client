@@ -1,0 +1,21 @@
+<div class="block"  >
+    <div class="item"  *ngFor="let i of videoItem"  appStyles [publishedDate]="i.snippet.publishedAt" >
+        <h2 class="title-item">{{ i.snippet.title }}</h2>
+        <h2>{{ i.snippet.publishedAt | date: 'fullDate' }}</h2>
+        <div>
+            <div class="info">
+                <img [src]="i.snippet.thumbnails.standard.url" alt="" />
+                    <div class="description">
+                        <h2 >Description</h2>
+                        <div >{{i.snippet.description}}</div>
+                    </div>
+            </div>
+        </div>
+        <div class="info-video">
+            <div class="info"> <img src="assets/eye.svg" width="50" alt="eye"> {{ i.statistics.viewCount }}</div>
+            <div class="info"><img src="assets/chat.svg" width="50" alt="chat">{{ i.statistics.commentCount }}</div>
+            <div class="info"><img src="assets/like.svg" width="50" alt="like">{{ i.statistics.likeCount }}</div>
+            <div class="info"><img src="assets/dislike.svg" width="50" alt="dislike">{{ i.statistics.dislikeCount || 0 }}</div>
+        </div>
+    </div>
+</div>

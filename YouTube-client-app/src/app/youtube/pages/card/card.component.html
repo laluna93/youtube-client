@@ -1,0 +1,61 @@
+<div class="container-card">
+<h1>Create new card</h1>
+<form [formGroup]="formsCreateCard">
+    <div>
+        <h2>Title</h2>
+        <input class="input" type="text" formControlName="title">
+    </div>
+    <div>
+        <small  *ngIf="formsCreateCard.get('title')?.errors?.['required']">Please enter a title</small>
+        <small *ngIf="formsCreateCard.get('title')?.invalid && formsCreateCard.get('title')?.getError('minlength')">
+            The title is too short
+        </small>
+        <small *ngIf="formsCreateCard.get('title')?.touched && formsCreateCard.get('title')?.getError('maxlength')">
+            The title is too long
+        </small>
+    </div>
+    <div>
+        <h2>Discription</h2>
+        <input class="input" type="text" formControlName="discription">
+    </div>
+    <div>
+        <small  *ngIf="formsCreateCard.get('discription')?.errors?.['required']">Please add a description</small>
+        <small  *ngIf="formsCreateCard.get('discription')?.getError('maxlength')">
+            The description is too long
+        </small>
+    </div>
+
+    <div>
+        <h2>Img</h2>
+        <input class="input" type="text" formControlName="img">
+    </div>
+
+    <div>
+        <small *ngIf="formsCreateCard.get('img')?.errors?.['required']">Please enter a link to the image</small>
+        <small *ngIf="formsCreateCard.get('img')?.getError('pattern')">The image link is invalid</small>
+    </div>
+    <div>
+        <h2>Link video</h2>
+        <input class="input" type="text" formControlName="linkVideo">
+    </div>
+
+    <div>
+        <small *ngIf="formsCreateCard.get('linkVideo')?.errors?.['required']">Please enter a link to the video</small>
+        <small *ngIf="formsCreateCard.get('linkVideo')?.getError('pattern')">The video link is invalid</small>
+
+    </div>
+
+    <div>
+        <h2>Date</h2>
+        <input class="input-date" type="date" formControlName="createDate">
+    </div>
+    <div>
+        <small *ngIf="formsCreateCard.get('createDate')?.errors?.['required']">
+            Please enter a creation date</small>
+            <small *ngIf="formsCreateCard.get('createDate')?.getError('invalidDate') && formsCreateCard.get('createDate')?.touched">
+                {{formsCreateCard.get('createDate')?.errors?.['invalidDate']}}</small>
+    </div>
+
+    <button class="btn-create" type="button" [disabled]="formsCreateCard.invalid" (click)="submitForm()">Create card</button>
+</form>
+</div>

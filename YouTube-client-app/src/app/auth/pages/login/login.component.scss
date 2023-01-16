@@ -1,0 +1,60 @@
+.login-section{
+    background-color: #000;
+    height: 100vh;
+    .form-wrapper{
+        border: 3px ridge rgb(223, 223, 223);
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        padding: 40px 0;
+        border-radius: 10px;
+    }
+    h1{
+        margin: 0 0 30px;
+        color: rgb(204, 203, 203);
+        text-align: center;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+        height: auto;
+    }
+    .input{
+        height: 40px;
+        border-radius: 10px;
+        padding-left: 10px;
+        &.ng-invalid.ng-touched{
+            border: 5px solid rgb(255, 0, 0);
+        }
+        &.ng-valid.ng-touched{
+            border: 5px solid rgb(11, 192, 35);
+            background-color:rgb(101 215 116)
+        }
+    }
+    .btn-login{
+        width: 100px;
+        height: 35px;
+        width: 170px;
+        height: 50px;
+        margin: 20px auto;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: rgb(255 0 0 / 75%);
+        border: 2px groove #ffffffd4;
+        color: #fff;
+        cursor: pointer;
+        &:hover:enabled{
+            background-color: rgb(0 0 0 / 75%);
+            transition: all 0.7s;
+
+        }
+    }
+    .email{
+        color: #fff;
+        margin-bottom: 20px;
+
+    }
+    
+}

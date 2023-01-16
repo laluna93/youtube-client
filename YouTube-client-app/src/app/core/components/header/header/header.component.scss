@@ -1,0 +1,68 @@
+.header-section{
+  background-color: #000;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  padding: 1%;
+  max-width: 1260px;
+  margin: 0 auto
+}
+
+.logo{
+  width: 50px;
+ 
+
+  width: 5rem;
+}
+
+.search{
+  position: relative;
+  
+}
+
+.input-search{
+  width: 50%;
+  width: 30rem;
+  height: 5vh;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+.btn-search{
+  position: absolute;
+  right: 0;
+  width: 6rem;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  border-left: 1px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  text-shadow: 3px 2px 2px black;
+  color: #ffffff;
+  font-size: 17px;
+  background: 
+	radial-gradient(ellipse farthest-corner at right bottom, #ffffff 0%, #4c4b4b 8%, #a7a59f 30%, #bdbaba 40%, transparent 60%), radial-gradient(ellipse farthest-corner at left top, #444444 0%, #686868 8%, #818181 25%, #ffffff 62.5%, #988f8f 100%)
+}
+.btn-search:hover{
+  background: radial-gradient(ellipse farthest-corner at right bottom, #f8f8f8 0%, #c1b7b7 8%, #fffffe 30%, #ffffff 40%, transparent 60%), radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffff 8%, #adadad 25%, #ffffff 62.5%, #ffffff 100%);
+}
+
+.img-login{
+  width: 70px;
+}
+
+.text-login{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

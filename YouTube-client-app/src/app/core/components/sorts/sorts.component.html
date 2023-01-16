@@ -1,0 +1,15 @@
+<div *ngIf="flagFilter" class="sorts">
+  <div class="item-sorts date" (click)="sortDate('date')">date</div>
+  <div class="item-sorts count" (click)="sortDate('count')">count of views</div>
+  <div class="item-sorts word">
+    <span>by word or sentance</span>
+    <input
+      type="text"
+      name="search"
+      [(ngModel)]="textFillter"
+      placeholder="search"
+      (input)="sortDate()"
+      #textInputSort
+    />
+  </div>
+</div>
