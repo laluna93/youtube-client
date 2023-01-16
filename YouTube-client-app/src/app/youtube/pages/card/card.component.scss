@@ -1,0 +1,60 @@
+h2{
+    color: #ffc107;
+}
+
+.selected{
+    background-color:#ff1e31
+}
+
+.input{
+    height: 20px;
+    width: 320px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 5px inset #e0c884;
+    &.ng-invalid.ng-touched{
+        border: 5px solid rgb(255, 0, 0);
+    }
+    &.ng-valid.ng-touched{
+        border: 5px solid rgb(11, 192, 35);
+        background-color:rgb(101 215 116);
+    }
+}
+
+.input-date{
+    height: 30px;
+    width: 110px;
+    border-radius: 10px;
+    padding-left: 10px;
+    &.ng-invalid.ng-touched{
+        border: 5px solid rgb(255, 0, 0);
+    }
+    &.ng-valid.ng-touched{
+        border: 5px solid rgb(11, 192, 35);
+        background-color:rgb(101 215 116);
+    }
+}
+.container-card{
+    background: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.btn-create{
+    background:rgb(255 243 0);
+    margin: 20px auto;
+    padding: 10px 25px;
+    border-radius: 10px;
+    color: #000;
+    &:disabled{
+        background:rgb(204, 203, 203);
+        color: rgb(122, 122, 122);
+
+
+    }
+}

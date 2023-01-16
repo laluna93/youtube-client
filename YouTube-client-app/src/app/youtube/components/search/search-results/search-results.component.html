@@ -1,0 +1,23 @@
+
+<div class="cards-wrapper" >
+  <div  *ngIf="stateCard">
+    <div class="item" appStyles [publishedDate]="stateCard.date">
+      <h2>{{stateCard.title}}</h2>
+      <p>{{stateCard.description}}</p>
+      <img [src]="stateCard.imgUrl" alt="{{stateCard.title}}" />
+    </div>
+  </div>
+  <div  *ngIf="card">
+    <div class="item"  appStyles [publishedDate]="card.snippet.publishedAt">
+      <h2>{{card.snippet.title}}</h2>
+      <img [src]="card.snippet.thumbnails.default.url" alt="{{card.snippet.title}}" />
+      <div class="info-video">
+        <div class="info"> <img src="assets/eye.svg" alt="eye"> {{ card.statistics.viewCount }}</div>
+        <div class="info"><img src="assets/chat.svg" alt="chat">{{ card.statistics.commentCount }}</div>
+        <div class="info"><img src="assets/like.svg" alt="like">{{ card.statistics.likeCount }}</div>
+        <div class="info"><img src="assets/dislike.svg" alt="dislike">{{ card.statistics.dislikeCount || 0 }}</div>
+      </div>
+      <a class="more" [routerLink]="['/youtube/video']" [queryParams]="{'id': card.id}" >More</a>
+    </div>
+  </div>
+</div>

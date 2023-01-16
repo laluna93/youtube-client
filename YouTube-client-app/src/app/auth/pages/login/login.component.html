@@ -1,0 +1,41 @@
+<div class="login-section">
+    <div class="form-wrapper">
+        <h1>USER LOGIN</h1>
+        <form class="form" [formGroup]="formAuth" (ngSubmit)="authorization()">
+            <input
+                class="input"
+                type="text" 
+                placeholder="Login"
+                name="login"
+                formControlName="login"
+            >
+            <div class="email">
+                <small *ngIf="formAuth.get('login')?.untouched">Please enter a login email</small>
+                <small *ngIf="formAuth.get('login')?.touched && formAuth.get('login')?.invalid">
+                    The login email is invalid
+                </small>
+            </div>
+            <input 
+                class="input" 
+                type="password" 
+                placeholder="password" 
+                name="password"
+                formControlName="password"
+            >
+            <div class="email">
+                <small *ngIf="formAuth.get('password')?.untouched">Please enter a password</small>
+                <small *ngIf="formAuth.get('password')?.touched && formAuth.get('password')?.getError('invalidPassword')">
+                    Your password isn't strong enough!
+                    {{formAuth.get('password')?.errors?.['invalidPassword']}}
+                </small>
+                
+            </div>
+            <button 
+                class="btn-login" 
+                type="button" 
+                [disabled]="formAuth.invalid" 
+                (click)="authorization()
+            ">LogIn</button>
+        </form>
+    </div>
+</div>

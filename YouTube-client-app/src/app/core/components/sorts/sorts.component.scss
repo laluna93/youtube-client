@@ -1,0 +1,42 @@
+.sorts {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #3a3a3a63;
+  color: #fff;
+}
+
+.item-sorts{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 2px;
+
+
+}
+.date{
+  width: 120px;
+  background-color: rgb(49, 119, 199);
+  text-align: center;
+  height: 25px;
+  font-size: 20px;
+}
+
+.count{
+  width: 125px;
+  background-color: rgb(29, 153, 50);
+  text-align: center;
+  height: 25px;
+  font-size: 18px;
+}
+
+.word{
+  border: 2px solid #e0ae1d;
+  padding: 10px;
+  border-radius: 25px;
+}

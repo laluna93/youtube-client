@@ -1,0 +1,32 @@
+<header class="header-section">
+  <div class="header">
+    <img class="logo" src="assets/logo.svg"  alt="youtube-logo" />
+    <div class="search">
+      <input
+      class="input-search"
+        type="text"
+        name="search"
+        placeholder="search"
+        [formControl]="text"
+      />
+    </div>
+    <app-fillters (activeFilter)="openFillter($event)"></app-fillters>
+    <div (click)="clickLogin()">
+      <a routerLink="/auth/login">
+      <img class="img-login" [src]=" isStatusAuth? 'assets/log.svg' : 'assets/inLog.svg'" width="30" alt="authorization" />
+      </a>
+      <span class="text-login">{{saveLogin}}</span>
+    </div>
+    <div (click)="addVideo()">
+      <a routerLink="/video/add">
+      <img class="img-login" src="assets/add-icon.png" width="30" alt="add video" />
+      </a>
+    </div>
+  </div>
+  <app-sorts
+    [flagFilter]="flagFilter"
+    (resultSearch)="sortVideo($event)"
+    (sortingDirection)="activeSort($event)"
+    [flag]="flag"
+  ></app-sorts>
+</header>
