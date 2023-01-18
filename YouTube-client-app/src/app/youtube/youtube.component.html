@@ -1,5 +1,5 @@
 
-<section class="section-results" >
+<section class="section-results">
 	<div class="box-results">
 		<app-search-results *ngFor="let card of stateCards"[stateCard]="card"></app-search-results>
 		<app-search-results *ngFor="let card of resultSearch | filterPipe: textSearch:inputFilter:flagSort"
